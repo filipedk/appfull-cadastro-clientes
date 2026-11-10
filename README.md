@@ -1,8 +1,8 @@
 # Appfull / Electronic — Módulo de Cadastro de Clientes
 **Unidade Curricular:** Programação Orientada a Objetos (Desenvolvimento Mobile — SENAI)  
 **Avaliação 01:** Modelagem e Implementação de Sistema de Cadastro com POO em JavaScript  
-**Estudante:** [Insira seu Nome Completo Aqui]  
-**Matrícula / ID:** [Insira sua Matrícula Aqui]  
+**Estudante:** Filipe  
+**Repositório GitHub:** [https://github.com/filipedk/appfull-cadastro-clientes](https://github.com/filipedk/appfull-cadastro-clientes)  
 **Data:** Novembro / 2026  
 
 ---
