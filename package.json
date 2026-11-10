@@ -1,0 +1,21 @@
+{
+  "name": "appfull-cadastro-clientes",
+  "version": "1.0.0",
+  "description": "Módulo de cadastro de clientes (PF e PJ) com Programação Orientada a Objetos em JavaScript para a Electronic",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node index.js"
+  },
+  "keywords": [
+    "poo",
+    "javascript",
+    "senai",
+    "classes",
+    "heranca",
+    "encapsulamento",
+    "uml"
+  ],
+  "author": "Estudante SENAI",
+  "license": "MIT"
+}
