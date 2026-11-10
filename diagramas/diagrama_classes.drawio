@@ -1,0 +1,40 @@
+<mxfile host="app.diagrams.net" agent="Antigravity">
+  <diagram id="UML-Appfull" name="Diagrama de Classes - Appfull">
+    <mxGraphModel dx="1030" dy="623" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="endereco_box" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;fillColor=#e1f5fe;strokeColor=#0288d1;rounded=1;shadow=1;" value="&lt;p style=&quot;margin:0px;padding-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Endereco&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left;&quot;&gt;- logradouro: String&lt;br/&gt;- numero: String&lt;br/&gt;- cidade: String&lt;br/&gt;- uf: String&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left;&quot;&gt;+ constructor(logradouro, numero, cidade, uf)&lt;br/&gt;+ get logradouro(): String&lt;br/&gt;+ set logradouro(valor: String)&lt;br/&gt;+ get numero(): String&lt;br/&gt;+ set numero(valor: String)&lt;br/&gt;+ get cidade(): String&lt;br/&gt;+ set cidade(valor: String)&lt;br/&gt;+ get uf(): String&lt;br/&gt;+ set uf(valor: String)&lt;br/&gt;+ formatar(): String&lt;/p&gt;" vertex="1">
+          <mxGeometry height="270" width="300" x="100" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pessoa_box" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;fillColor=#fff9c4;strokeColor=#fbc02d;rounded=1;shadow=1;" value="&lt;p style=&quot;margin:0px;padding-top:4px;text-align:center;&quot;&gt;&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;br/&gt;&lt;b&gt;Pessoa&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left;&quot;&gt;# nome: String&lt;br/&gt;# endereco: Endereco&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left;&quot;&gt;+ constructor(nome, endereco)&lt;br/&gt;+ get nome(): String&lt;br/&gt;+ set nome(valor: String)&lt;br/&gt;+ get endereco(): Endereco&lt;br/&gt;+ set endereco(valor: Endereco)&lt;br/&gt;+ exibirDetalhes(): String&lt;/p&gt;" vertex="1">
+          <mxGeometry height="210" width="300" x="540" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pf_box" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;fillColor=#e8f5e9;strokeColor=#388e3c;rounded=1;shadow=1;" value="&lt;p style=&quot;margin:0px;padding-top:4px;text-align:center;&quot;&gt;&lt;b&gt;PessoaFisica&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left;&quot;&gt;- cpf: String&lt;br/&gt;- dataNascimento: Date&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left;&quot;&gt;+ constructor(nome, endereco, cpf, dataNasc)&lt;br/&gt;+ get cpf(): String&lt;br/&gt;+ set cpf(valor: String)&lt;br/&gt;+ get dataNascimento(): Date&lt;br/&gt;+ set dataNascimento(valor: String|Date)&lt;br/&gt;+ exibirDetalhes(): String&lt;/p&gt;" vertex="1">
+          <mxGeometry height="200" width="310" x="360" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="pj_box" parent="1" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;fillColor=#f3e5f5;strokeColor=#7b1fa2;rounded=1;shadow=1;" value="&lt;p style=&quot;margin:0px;padding-top:4px;text-align:center;&quot;&gt;&lt;b&gt;PessoaJuridica&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left;&quot;&gt;- cnpj: String&lt;br/&gt;- razaoSocial: String&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0px;margin-left:4px;text-align:left;&quot;&gt;+ constructor(nome, endereco, cnpj, razaoSocial)&lt;br/&gt;+ get cnpj(): String&lt;br/&gt;+ set cnpj(valor: String)&lt;br/&gt;+ get razaoSocial(): String&lt;br/&gt;+ set razaoSocial(valor: String)&lt;br/&gt;+ exibirDetalhes(): String&lt;/p&gt;" vertex="1">
+          <mxGeometry height="200" width="320" x="720" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_heranca_pf" edge="1" parent="1" source="pf_box" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;strokeWidth=2;strokeColor=#2e7d32;entryX=0.3;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="pessoa_box" value="extends (herda de)">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="500" y="400" as="sourcePoint" />
+            <mxPoint x="550" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_heranca_pj" edge="1" parent="1" source="pj_box" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;strokeWidth=2;strokeColor=#6a1b9a;entryX=0.7;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="pessoa_box" value="extends (herda de)">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="850" y="400" as="sourcePoint" />
+            <mxPoint x="750" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge_associacao" edge="1" parent="1" source="pessoa_box" style="endArrow=open;endSize=12;html=1;rounded=0;strokeWidth=2;strokeColor=#0277bd;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="endereco_box" value="1 tem 1 (endereço)">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="530" y="190" as="sourcePoint" />
+            <mxPoint x="410" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
